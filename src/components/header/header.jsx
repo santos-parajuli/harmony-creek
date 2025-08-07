@@ -91,7 +91,7 @@ const Header = () => {
 			<nav className='flex items-center  justify-between'>
 				{/* Logo */}
 				<a href='/' className='flex items-center gap-2'>
-					<img src='http://harmonycreekgolf.com/wp-content/uploads/2015/05/harmony-creek-logo-H.png' className='max-h-8' alt='Logo' />
+					<img src='/photos/logo.png' className='max-h-8' alt='Logo' />
 					<span className='text-lg font-semibold tracking-tighter'>Harmony Creek Golf</span>
 				</a>
 
