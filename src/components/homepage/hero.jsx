@@ -26,9 +26,7 @@ export default function Hero() {
 				}}
 				className='z-50 flex flex-col justify-center items-center px-4'>
 				<motion.p className='font-bold text-4xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4'>Harmony Creek Golf Centre</motion.p>
-				<motion.p className='capitalize bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 text-center text-lg md:text-2xl py-4'>
-					Open to Public, 18 Hole golf course, Driving range, Mini Putt, Banquet hall, Restaurant & Bar
-				</motion.p>
+				<motion.p className='capitalize bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 text-center text-lg md:text-2xl py-4'>Oshawa’s Premier Golf & Event Destination – Play, Celebrate, Connect</motion.p>
 				<a href='https://harmony-creek-golf-centre.book.teeitup.golf' target='_blank' rel='noopener noreferrer' className='cursor-pointer'>
 					<button className='px-4 py-2 backdrop-blur-sm border bg-emerald-300/10 border-emerald-500/20 text-white mx-auto text-center rounded-full relative mt-4'>
 						<span>Book Now →</span>

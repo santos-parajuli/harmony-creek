@@ -1,74 +1,76 @@
-import { CalendarDays, Golf, Utensils } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
+'use client';
 
-import { cn } from '@/lib/utils';
+import { CalendarDays, Flag, Heart, Target, Trophy } from 'lucide-react';
+
+import { GlowingEffect } from '@/components/ui/glowing-effect';
 
 const quickLinks = [
 	{
-		title: 'Golf Facilities',
-		description: '18-hole executive course, driving range, mini-putt, and lessons.',
-		href: '#',
-		cta: 'Learn More →',
-		icon: Golf,
-		iconForeground: 'text-green-700',
-		iconBackground: 'bg-green-50 dark:bg-green-950/30',
-		ringColorClass: 'ring-green-700/30',
+		title: 'Golf Course',
+		description: 'Play on our scenic 18-hole championship golf course.',
+		icon: <Flag className='h-4 w-4 text-black dark:text-neutral-400' />,
+		area: 'md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]',
 	},
 	{
-		title: 'Tournaments & Events',
-		description: 'Host corporate outings, charity tournaments, and private events.',
-		href: '#',
-		cta: 'Plan an Event →',
-		icon: CalendarDays,
-		iconForeground: 'text-blue-700',
-		iconBackground: 'bg-blue-50 dark:bg-blue-950/30',
-		ringColorClass: 'ring-blue-700/30',
+		title: 'Driving Range',
+		description: 'Sharpen your swing with unlimited range balls.',
+		icon: <Target className='h-4 w-4 text-black dark:text-neutral-400' />,
+		area: 'md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]',
 	},
 	{
-		title: 'Banquet & Dining',
-		description: 'Elegant venue for weddings, parties, and business meetings.',
-		href: '#',
-		cta: 'View Menus →',
-		icon: Utensils,
-		iconForeground: 'text-amber-700',
-		iconBackground: 'bg-amber-50 dark:bg-amber-950/30',
-		ringColorClass: 'ring-amber-700/30',
+		title: 'Weddings',
+		description: 'Host your dream wedding with stunning views and catering.',
+		icon: <Heart className='h-4 w-4 text-black dark:text-neutral-400' />,
+		area: 'md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/8]',
+	},
+	{
+		title: 'Tournaments',
+		description: 'Plan and compete in professional or friendly tournaments.',
+		icon: <Trophy className='h-4 w-4 text-black dark:text-neutral-400' />,
+		area: 'md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]',
+	},
+	{
+		title: 'Lessons',
+		description: 'Learn from certified golf pros with private or group lessons.',
+		icon: <CalendarDays className='h-4 w-4 text-black dark:text-neutral-400' />,
+		area: 'md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13]',
 	},
 ];
 
-export default function QuickLinksGrid() {
+export function QuickLinks() {
 	return (
-		<div className='flex items-center justify-center p-8'>
-			<div className='w-full max-w-full overflow-hidden rounded-xl bg-muted shadow-sm grid grid-cols-1 md:grid-cols-3 gap-6 p-6'>
-				{quickLinks.map((link) => {
-					const IconComponent = link.icon;
-					return (
-						<Card key={link.title} className={cn('group relative rounded-lg border bg-card hover:shadow-md transition-all duration-300 hover:scale-[1.02]', 'focus-within:ring-2 focus-within:ring-ring focus-within:ring-inset')}>
-							<CardContent className='p-6'>
-								<div>
-									<span className={cn(link.iconBackground, link.iconForeground, 'inline-flex rounded-lg p-3 ring-2 ring-inset transition-colors duration-300 group-hover:bg-white/50', link.ringColorClass)}>
-										{/* <IconComponent aria-hidden='true' className='h-6 w-6' /> */}
-									</span>
-								</div>
-								<div className='mt-6'>
-									<h3 className='text-lg font-semibold text-foreground'>
-										<a href={link.href} className='focus:outline-none'>
-											<span aria-hidden='true' className='absolute inset-0' />
-											{link.title}
-										</a>
-									</h3>
-									<p className='mt-2 text-muted-foreground'>{link.description}</p>
-								</div>
-								<div className='mt-6'>
-									<a href={link.href} className='inline-flex items-center text-sm font-medium text-primary hover:text-primary/80 transition-colors duration-300'>
-										{link.cta}
-									</a>
-								</div>
-							</CardContent>
-						</Card>
-					);
-				})}
-			</div>
-		</div>
+		<ul
+			className='
+        grid grid-cols-1 grid-rows-none gap-2
+        md:grid-cols-12 md:grid-rows-3
+        lg:gap-2
+        xl:max-h-[34rem] xl:grid-rows-2
+        px-2
+		pt-4
+		max-w-7xl m-auto
+      '>
+			{quickLinks.map((link) => (
+				<GridItem key={link.title} icon={link.icon} title={link.title} description={link.description} area={link.area} />
+			))}
+		</ul>
 	);
 }
+
+const GridItem = ({ area, icon, title, description }) => {
+	return (
+		<li className={`min-h-[14rem] list-none ${area} p-2`}>
+			<div className='relative h-full rounded-2xl border p-2 md:rounded-3xl md:p-3'>
+				<GlowingEffect spread={40} glow={true} disabled={false} proximity={64} inactiveZone={0.01} />
+				<div className='border-0.75 relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl p-6 md:p-6 dark:shadow-[0px_0px_27px_0px_#2D2D2D]'>
+					<div className='relative flex flex-1 flex-col justify-between gap-3'>
+						<div className='w-fit rounded-lg border border-gray-600 p-2'>{icon}</div>
+						<div className='space-y-3'>
+							<h3 className='-tracking-4 pt-0.5 font-sans text-xl/[1.375rem] font-semibold text-black md:text-2xl/[1.875rem] dark:text-white'>{title}</h3>
+							<p className='font-sans text-sm/[1.125rem] text-black md:text-base/[1.375rem] dark:text-neutral-400'>{description}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+	);
+};

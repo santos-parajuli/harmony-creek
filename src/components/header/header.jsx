@@ -91,7 +91,7 @@ const Header = () => {
 			<nav className='flex items-center  justify-between'>
 				{/* Logo */}
 				<a href='/' className='flex items-center gap-2'>
-					<img src='/photos/logo.png' className='max-h-8' alt='Logo' />
+					<img src='/images/logo.png' className='max-h-8' alt='Logo' />
 					<span className='text-lg font-semibold tracking-tighter'>Harmony Creek Golf</span>
 				</a>
 
@@ -137,6 +137,14 @@ const Header = () => {
 				{/* Mobile Menu */}
 				<div className='block lg:hidden'>
 					<div className='flex items-center justify-between'>
+						<div className='mr-2'>
+							<Button asChild>
+								<a href='https://harmony-creek-golf-centre.book.teeitup.golf' target='_blank' rel='noopener noreferrer'>
+									Book Now
+								</a>
+							</Button>
+						</div>
+
 						<Sheet>
 							<SheetTrigger asChild>
 								<Button variant='outline' size='icon'>
@@ -177,11 +185,6 @@ const Header = () => {
 									</Accordion>
 									<div className='flex flex-col gap-3'>
 										<ModeToggle />
-										<Button asChild>
-											<a href='https://harmony-creek-golf-centre.book.teeitup.golf' target='_blank' rel='noopener noreferrer'>
-												Book Now
-											</a>
-										</Button>
 									</div>
 								</div>
 							</SheetContent>
