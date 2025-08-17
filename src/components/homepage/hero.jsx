@@ -25,12 +25,12 @@ export default function Hero() {
 					duration: 0.9,
 				}}
 				className='z-50 flex flex-col justify-center items-center px-4'>
-				<motion.p className='font-bold text-4xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4'>Harmony Creek Golf Centre</motion.p>
-				<motion.p className='capitalize bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 text-center text-lg md:text-2xl py-4'>Oshawa’s Premier Golf & Event Destination – Play, Celebrate, Connect</motion.p>
+				<motion.p className='font-bold text-4xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-primary-foreground to-muted-foreground py-4'>Harmony Creek Golf Centre</motion.p>
+				<motion.p className='capitalize bg-clip-text text-transparent bg-gradient-to-b from-primary-foreground to-muted-foreground text-center text-lg md:text-2xl py-4'>Oshawa’s Premier Golf & Event Destination – Play, Celebrate, Connect</motion.p>
 				<a href='https://harmony-creek-golf-centre.book.teeitup.golf' target='_blank' rel='noopener noreferrer' className='cursor-pointer'>
-					<button className='px-4 py-2 backdrop-blur-sm border bg-emerald-300/10 border-emerald-500/20 text-white mx-auto text-center rounded-full relative mt-4'>
+					<button className='px-4 py-2 backdrop-blur-sm border bg-chart-3/10 border-chart-3/20 text-primary-foreground mx-auto text-center rounded-full relative mt-4'>
 						<span>Book Now →</span>
-						<div className='absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-500 to-transparent' />
+						<div className='absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-chart-3 to-transparent' />
 					</button>
 				</a>
 			</motion.div>

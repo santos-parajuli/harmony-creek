@@ -11,20 +11,20 @@ export default function LogoCloud() {
 					</div>
 					<div className='relative py-6 md:w-[calc(100%-11rem)]'>
 						<InfiniteSlider speedOnHover={20} speed={40} gap={80}>
-							<div className='flex'>
-								<img className='mx-auto h-10 w-fit ' src='/images/logo/GOCO.svg' alt='GOCO Logo' height='20' width='auto' />
+							<div className='flex items-center justify-center'>
+								<img className='h-10 w-auto' src='/images/logo/GOCO.svg' alt='GOCO Logo' />
 							</div>
-							<div className='flex'>
-								<img className='mx-auto h-10 w-fit ' src='/images/logo/ngcoa.svg' alt='ngcoa Logo' height='16' width='auto' />
+							<div className='flex items-center justify-center'>
+								<img className='h-10 w-auto' src='/images/logo/ngcoa.svg' alt='ngcoa Logo' />
 							</div>
-							<div className='flex'>
-								<img className='mx-auto h-10 w-fit ' src='/images/logo/orhma.png' alt='orhma Logo' height='16' width='auto' />
+							<div className='flex items-center justify-center'>
+								<img className='h-10 w-auto' src='/images/logo/orhma.png' alt='orhma Logo' />
 							</div>
-							<div className='flex'>
-								<img className='mx-auto h-10 w-fit invert dark:invert-0' src='/images/logo/resturantcanada.png' alt='resturantcanada Logo' height='20' width='auto' />
+							<div className='flex items-center justify-center'>
+								<img className='h-10 w-auto invert dark:invert-0' src='/images/logo/resturantcanada.png' alt='resturantcanada Logo' />
 							</div>
-							<div className='flex'>
-								<img className='mx-auto h-30 w-fit ' src='/images/logo/award.png' alt='award Logo' height='20' width='auto' />
+							<div className='flex items-center justify-center'>
+								<img className='h-10 w-auto' src='/images/logo/award.png' alt='award Logo' />
 							</div>
 						</InfiniteSlider>
 
