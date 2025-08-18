@@ -1,7 +1,7 @@
 'use client';
 
 import { Button } from '../ui/button';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 export default function WhyChooseHarmony() {
 	return (
@@ -18,7 +18,7 @@ export default function WhyChooseHarmony() {
 					<img src='/images/course.png' alt='Golf Course' className='w-full h-full object-cover' />
 				</div>
 				<div>
-					<h3 className='text-2xl font-semibold mb-4 flex items-center gap-2'>🏌️‍♂️ A Course That Challenges & Inspires</h3>
+					<h3 className='text-2xl font-semibold mb-4 flex items-center gap-2'>A Course That Challenges & Inspires</h3>
 					<p className='text-muted-foreground dark:text-muted-foreground leading-relaxed'>
 						Our 18-hole executive course offers the perfect balance of playability and challenge, with water hazards, strategic bunkers, and pristine greens set against a backdrop of mature trees and tranquil creeks. Whether you're a
 						seasoned golfer or a beginner, every round is a chance to test your skills and soak in stunning views.
@@ -34,7 +34,7 @@ export default function WhyChooseHarmony() {
 			{/* Events */}
 			<motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: false }} className='grid gap-8 md:grid-cols-2 md:items-center mb-16'>
 				<div className='order-2 md:order-1'>
-					<h3 className='text-2xl font-semibold mb-4 flex items-center gap-2'>🎉 Unmatched Event Hosting</h3>
+					<h3 className='text-2xl font-semibold mb-4 flex items-center gap-2'>Unmatched Event Hosting</h3>
 					<p className='text-muted-foreground dark:text-muted-foreground leading-relaxed'>From elegant weddings in our acclaimed Harmony Hall to high-energy corporate tournaments, we deliver:</p>
 					<ul className='mt-4 space-y-2 text-muted-foreground dark:text-muted-foreground list-disc list-inside'>
 						<li>Customized service with expert event coordination</li>
@@ -53,13 +53,13 @@ export default function WhyChooseHarmony() {
 					<img src='/images/more-than-golf.png' alt='Golf Academy and More' className='w-full h-full object-cover' />
 				</div>
 				<div>
-					<h3 className='text-2xl font-semibold mb-4 flex items-center gap-2'>🌟 More Than Just Golf</h3>
+					<h3 className='text-2xl font-semibold mb-4 flex items-center gap-2'>More Than Just Golf</h3>
 					<ul className='space-y-2 text-muted-foreground dark:text-muted-foreground list-disc list-inside'>
 						<li>Top-tier practice facilities, including a floodlit driving range and award-winning mini-putt</li>
 						<li>CPGA-led instruction for all ages and skill levels</li>
 						<li>Year-round hospitality in our Master’s Lounge and banquet halls</li>
 					</ul>
-					<p className='mt-4 text-foreground dark:text-foreground font-medium'>Where every detail is crafted for excellence—on the course and beyond. ⛳🍽️</p>
+					<p className='mt-4 text-foreground dark:text-foreground font-medium'>Where every detail is crafted for excellence—on the course and beyond.</p>
 					<Button asChild className='mt-4'>
 						<a href='https://harmony-creek-golf-centre.book.teeitup.golf' target='_blank' rel='noopener noreferrer'>
 							Book Now

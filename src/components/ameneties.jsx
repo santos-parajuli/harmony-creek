@@ -7,14 +7,11 @@ import { cn } from '@/lib/utils';
 import { motion } from 'motion/react';
 
 const BentoGridItem = ({ title, description, icon, className, animationIndex }) => {
-	const delay = animationIndex * 0.06;
-	const duration = 0.5;
-
 	return (
 		<motion.div
-			initial={{ opacity: 0, y: 40 }}
-			whileInView={{ opacity: 1, y: 0 }}
-			transition={{ duration: delay }}
+			initial={{ opacity: 0, scale: 0 }}
+			whileInView={{ opacity: 1, scale: 1 }}
+			transition={{ duration: 0.4 }}
 			viewport={{ once: false }}
 			className={cn(
 				'group relative flex flex-col justify-between overflow-hidden rounded-xl border border-primary/10 bg-background p-3 md:px-4 md:py-6 shadow-md transition-all duration-500 hover:border-primary/20 hover:shadow-xl hover:scale-[1.03]',
